@@ -2,56 +2,177 @@
 <html>
 <head>
 <style>
-
 body{
-	background-image: url("http://www.pptbackgrounds.org/uploads/haitian-flag-powerpoint-backgrounds.jpg")
+    background-image: 
+}
+#header {
+   background-color: #008B8B;
+    color:white;
+    text-align:center;
+    padding:5px;
+    background-repeat: no-repeat;
+
+    font-family: "Times New Roman", Times, serif;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:480px;
+    width:100px;
+    float:left;
+    padding:5px;	 
+    font-family: "Times New Roman", Times, serif;   
 
 }
-h2{
-    text-align: left;
-    margin-left: 80px;
-    color: #6495ED;
-     font-family: "Times New Roman", Times, serif;
+#section {
+    width:350px;
+    height: 490px;
+    float:left;
+    padding:10px;	 
+    font-family: "Times New Roman", Times, serif;
+    background-color: #A9A9A9;	 
+
 }
-h1{
-	text-align: left;
-	margin-left: 80px;
-	color: #6495ED;
-	 font-family: "Times New Roman", Times, serif;
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+   font-family: "Times New Roman", Times, serif;
+}
+#section2{
+    background-color: #A9A9A9;
+     font-family: "Times New Roman", Times, serif;
+     height: 46px;
 }
 img{
-	height: 400px;
-	width: 600px;
-
-	margin-left: 300px;
+    height: 430px;
+    margin-top: 0px;
+    width: 700px;
 }
-p{
-	color: #00BFFF;
-	margin-left: 50px;
-	margin-top: 50px;
+#stmark{
+    height: 100px;
+    width: 70px;
+    margin-left: 50px;
 }
-div{margin-top: 500px;}
-
+.btn{
+    margin-left: 25%;
+}
 </style>
 </head>
-
 <body>
-<h1>St Mark's Haiti Partnership Committe</h1>
+
+<div id="header">
+<h1>St Mark's Haiti Partnership Committe
+<img id="stmark" src="https://www.gatewaytoprepschools.com/assets/school-logos/st-marks-386a059eff903da6d0b6be9e914336dd.jpg"></h1>
 <h2>St Mark's School, Southborough, Massachusetts<h2>
+</div>
 
-<p> About us <img src="https://smhaitipartnership.files.wordpress.com/2014/04/img_1614.jpg" style="float: right;"></p>
-<p> Activities </p>
-<p> Photos  </p>
+<div id="nav">
+    <button>
+About us</button><br>
+<br><br>
+<button>
+Activities</button><br>
+<br><br>
+<button>
+Photos </button><br>
+<br><br>
+<button>
+Articles</button><br>
+<br><br>
+<button>
+Support us</button><br>
+<br><br>
+<button>
+Join us
+</button></div>
 
-	
+<div id="section">
+<h2>What's New</h2>
+<p>Haiti... p1</p>
+<p>Haiti... p2</p>
+</div>
+<div id="picture">
+    <p>
+        <img src="https://smhaitipartnership.files.wordpress.com/2014/04/img_1614.jpg">
+        </p>
+        <button id="forward" class="btn"> forward </button>
+        <button id="backward" > backward </button>
+    <div>
+<div id="section2">
+    <p>What's coming up:<br>
+        
+        </p>
+</div>
+<div id="footer">
+Know more at https://smhaitipartnership.wordpress.com/
 
-<p> Articles </p>
-<p> Support us </p>
-<p> Join us </p>
 
-<p>
 
+</div>
+
+<script type="text/javascript"> 
+alert("hi");
+var i = 0; 
+var image = new Array();   
+
+image[0] = ""; 
+image[1] = ""; 
+image[2] = "";   
+var k = image.length-1;    
+var caption = new Array(); 
+
+
+caption[0] = "  "; 
+caption[1] = "  "; 
+caption[2] = "  "; 
+
+function next(){
+var el = document.getElementById("mydiv"); 
+el.innerHTML=caption[i]; 
+var img= document.getElementById("slide"); 
+img.src= image[i]; 
+if(i < k ) { i++;}  
+else  { i = 0; }
+}
+
+function prev(){
+var el = document.getElementById("mydiv"); 
+el.innerHTML=caption[i]; 
+var img= document.getElementById("slide"); 
+img.src= image[i]; 
+if(i >0 ) { i--;}  
+else  { i = k; }
+}
+
+function swapImage(){ 
+var el = document.getElementById("mydiv"); 
+el.innerHTML=caption[i]; 
+var img= document.getElementById("slide"); 
+img.src= image[i]; 
+if(i < k ) { i++;}  
+else  { i = 0; } 
+setTimeout("swapImage()",5000); 
+} 
+function addLoadEvent(func) { 
+var oldonload = window.onload; 
+if (typeof window.onload != 'function') { 
+window.onload = func; 
+} else  { 
+window.onload = function() { 
+if (oldonload) { 
+oldonload(); 
+} 
+func(); 
+} 
+} 
+} 
+addLoadEvent(function() { 
+swapImage(); 
+});  
+</script>
 
 </body>
-
 </html>
