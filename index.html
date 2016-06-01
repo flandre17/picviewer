@@ -1,178 +1,126 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+	<style>
 body{
-    background-image: 
+	background-image: url("http://www.photops.com/Photo/UpPhoto2010/201106/2011060409223978.jpg")
 }
-#header {
-   background-color: #008B8B;
-    color:white;
-    text-align:center;
-    padding:5px;
-    background-repeat: no-repeat;
+h1{
+	text-align: center;
+}
 
-    font-family: "Times New Roman", Times, serif;
+h2{
+	text-align: center;
 }
-#nav {
-    line-height:30px;
-    background-color:#eeeeee;
-    height:480px;
-    width:100px;
-    float:left;
-    padding:5px;	 
-    font-family: "Times New Roman", Times, serif;   
-
+h3{
+	text-align: center;
+	 font-family: "Times New Roman", Times, serif;
+	 color: blue;
 }
-#section {
-    width:350px;
-    height: 490px;
-    float:left;
-    padding:10px;	 
-    font-family: "Times New Roman", Times, serif;
-    background-color: #A9A9A9;	 
-
-}
-#footer {
-    background-color:black;
-    color:white;
-    clear:both;
-    text-align:center;
-   padding:5px;	 	 
-   font-family: "Times New Roman", Times, serif;
-}
-#section2{
-    background-color: #A9A9A9;
-     font-family: "Times New Roman", Times, serif;
-     height: 46px;
+p{
+	text-align: center;
 }
 img{
-    height: 430px;
-    margin-top: 0px;
-    width: 700px;
+	width:50%;
+height: 50%;
+position: relative;
+margin-left: 300px;
 }
-#stmark{
-    height: 100px;
-    width: 70px;
-    margin-left: 50px;
+button{
+	margin-left: 400px;
 }
-.btn{
-    margin-left: 25%;
+#left{
+margin-left: 30%
 }
-</style>
+#right{
+
+}
+	</style>
 </head>
+
 <body>
+	<link href="../0205/style.css" media="all" rel="stylesheet" »
+      type="text/css" />
+<h1>
+Carol's Spring Break2016
+</h1>
 
-<div id="header">
-<h1>St Mark's Haiti Partnership Committe
-<img id="stmark" src="https://www.gatewaytoprepschools.com/assets/school-logos/st-marks-386a059eff903da6d0b6be9e914336dd.jpg"></h1>
-<h2>St Mark's School, Southborough, Massachusetts<h2>
-</div>
+<h3 class="">
+	The West Lake</br>Shanghai, China, 2016.03.23	</h3>
 
-<div id="nav">
-    <button>
-About us</button><br>
-<br><br>
-<button>
-Activities</button><br>
-<br><br>
-<button>
-Photos </button><br>
-<br><br>
-<button>
-Articles</button><br>
-<br><br>
-<button>
-Support us</button><br>
-<br><br>
-<button>
-Join us
-</button></div>
 
-<div id="section">
-<h2>What's New</h2>
-<p>Haiti... p1</p>
-<p>Haiti... p2</p>
-</div>
-<div id="picture">
-    <p>
-        <img src="https://smhaitipartnership.files.wordpress.com/2014/04/img_1614.jpg">
-        </p>
-        <button id="forward" class="btn"> forward </button>
-        <button id="backward" > backward </button>
-    <div>
-<div id="section2">
-    <p>What's coming up:<br>
-        
-        </p>
-</div>
-<div id="footer">
-Know more at https://smhaitipartnership.wordpress.com/
+
+
+    
+
+
+
+<div class="w3-content" style="max-width:800px;position:relative">
+
+<img class="mySlides" src="http://www.chinatourguide.com/china_photos/Hangzhou/Attractions/hangzhou_West_Lake.jpg" style="width:100%">
+<img class="mySlides" src="http://www.michellesoh.com/uploads/5/3/3/5/53356041/5734461_orig.jpg" style="width:100%">
+<img class="mySlides" src="http://www.bestourism.com/img/items/big/7861/Beijing-Capital-International-Airport_Relaxing-space_14435.jpg" style="width:100%">
+<img class="mySlides" src="http://www.chinadaily.com.cn/m/shanghai/sheshan/images/attachement/jpg/site1/20150105/286ed488c7e31614917e12.jpg" style="width:100%">
+
 
 
 
 </div>
+    
+<div>
+
+<p class="caption">
+	1. I travlled to Hangzhou with my friends and we visited the famous West Lake.<br>
+
+	2. I had lunch at a hot-pot restaurant.<br>
+
+	3. I went to Beijing by airplane.<br>
+
+	4. I went to visit the school I used to attend.<br>
+</p>
+
+</div>
+    <button id="left" onclick="plusDivs(-1)"><</button>
+<button id="right" onclick="plusDivs(1)">></button>
 
 <script type="text/javascript"> 
-alert("hi");
-var i = 0; 
-var image = new Array();   
+var slideIndex = 1;
+showDivscaption(slideIndex);
 
-image[0] = ""; 
-image[1] = ""; 
-image[2] = "";   
-var k = image.length-1;    
-var caption = new Array(); 
+var slideIndex = 1;
+showDivs(slideIndex);
 
 
-caption[0] = "  "; 
-caption[1] = "  "; 
-caption[2] = "  "; 
-
-function next(){
-var el = document.getElementById("mydiv"); 
-el.innerHTML=caption[i]; 
-var img= document.getElementById("slide"); 
-img.src= image[i]; 
-if(i < k ) { i++;}  
-else  { i = 0; }
+function plusDivs(n) {
+  showDivs(slideIndex += n);
 }
 
-function prev(){
-var el = document.getElementById("mydiv"); 
-el.innerHTML=caption[i]; 
-var img= document.getElementById("slide"); 
-img.src= image[i]; 
-if(i >0 ) { i--;}  
-else  { i = k; }
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
 }
 
-function swapImage(){ 
-var el = document.getElementById("forward"); 
-el.innerHTML=caption[i]; 
-var img= document.getElementById("forward"); 
-img.src= image[i]; 
-if(i < k ) { i++;}  
-else  { i = 0; } 
-setTimeout("swapImage()",5000); 
+function plusDivscaption(n) {
+  showDivscaption(slideIndex += n);
+}
+function showDivscaption(n) {
+  var i;
+  var x = document.getElementsByClassName("caption");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
 } 
-function addLoadEvent(func) { 
-var oldonload = window.onload; 
-if (typeof window.onload != 'function') { 
-window.onload = func; 
-} else  { 
-window.onload = function() { 
-if (oldonload) { 
-oldonload(); 
-} 
-func(); 
-} 
-} 
-} 
-addLoadEvent(function() { 
-swapImage(); 
-});  
 </script>
-
 </body>
+
+
 </html>
